@@ -5,6 +5,7 @@ gem 'bunny'
 gem 'rufus-scheduler'
 gem 'pg'
 gem 'sequel'
+gem 'sneakers'
 
 group :development do
   gem 'dotenv'

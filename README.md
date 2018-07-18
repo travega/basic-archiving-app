@@ -17,7 +17,7 @@
     heroku create <my_app_name>
     heroku addons:create heroku-postgresql
     heroku addons:create herokuconnect
-    heroku addons:create rabbitmq-bigwig
+    heroku addons:create cloudamqp
     heroku config > .env
     ```
  4. Then deploy the code to your app by running: `git push heroku master`

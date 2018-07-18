@@ -1,16 +1,25 @@
-require "bunny"
 require 'dotenv/load'
+require 'bunny'
 require 'pg'
 require 'sequel'
+require 'sneakers'
+require 'sneakers/runner'
 
-b = Bunny.new ENV['CLOUDAMQP_URL']
-b.start # start a communication session with the amqp server
-q = b.queue 'archival' # declare a queue
-
-payload = q.pop # retrieve one message from the queue
-puts "Payload: #{payload}"
-
-if payload == 'run'
-  db = Sequel.connect(ENV['DATABASE_URL'])
-  db.run('select archive.run_archival()')
+class Processor
+  include Sneakers::Worker
+  from_queue :archival
+  def work(msg)
+    if msg == 'run'
+      db = Sequel.connect(ENV['DATABASE_URL'])
+      puts db.run('select archive.run_archival()')
+    end
+  end
 end
+
+opts = {
+  :amqp => ENV['CLOUDAMQP_URL']
+}
+
+Sneakers.configure(opts)
+r = Sneakers::Runner.new([Processor])
+r.run
