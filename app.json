@@ -4,12 +4,5 @@
   "image": "heroku/python",
   "repository": "https://github.com/travega/basic-archiving-app",
   "keywords": ["python" ],
-  "addons": [ "heroku-postgresql", "herokuconnect", "cloudamqp" ],
-  "environments": {
-    "test": {
-      "scripts": {
-        "postdeploy": "ruby setup.rb"
-      }
-    }
-  }
+  "addons": [ "heroku-postgresql", "herokuconnect" ]
 }
