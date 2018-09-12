@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.5.1'
-gem 'rackup'
+gem 'rack'
 gem 'rufus-scheduler'
 gem 'pg'
 gem 'sequel'
