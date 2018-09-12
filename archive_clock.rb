@@ -1,6 +1,9 @@
 require 'sequel'
-require 'dotenv/load'
 require 'rufus-scheduler'
+
+if  ENV['RACK_ENV'] == 'development'
+  require 'dotenv/load'
+end
 
 def self.send_archival_command
   db = Sequel.connect(ENV['DATABASE_URL'])
