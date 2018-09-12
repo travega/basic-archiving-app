@@ -1,9 +1,9 @@
 {
   "name": "Simple Heroku archiving app",
   "description": "Basic archiving solution using Heroku connect and Salesforce connect",
-  "image": "heroku/python",
+  "image": "heroku/ruby",
   "repository": "https://github.com/travega/basic-archiving-app",
-  "keywords": ["python" ],
+  "keywords": ["ruby" ],
   "addons": [ "heroku-postgresql", "herokuconnect" ],
   "environments": {
     "test": {
