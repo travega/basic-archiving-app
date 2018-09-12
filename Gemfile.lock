@@ -29,6 +29,7 @@ DEPENDENCIES
   debase
   dotenv
   pg
+  rack
   rufus-scheduler
   sequel
   shotgun
