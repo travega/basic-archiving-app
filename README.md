@@ -6,7 +6,7 @@
 ### Heroku button
 
  1. Click the Deploy to Heroku button
- 2. Use Heroku CLI to checkout the code: ``
+ 2. Use Heroku CLI to checkout the code: `heroku git:clone -a <my_app_name>`
 
 ### Manual
 
