@@ -1,4 +1,4 @@
-CREATE SCHEMA "archive";
+CREATE SCHEMA IF NOT EXISTS "archive";
 
 CREATE OR REPLACE FUNCTION archive.run_archival()
  RETURNS void AS

@@ -1,2 +1,2 @@
-worker: ruby archive_clock.rb
+web: ruby archive_clock.rb
 release: ruby setup.rb
