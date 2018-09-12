@@ -1,1 +1,1 @@
-clock: ruby archive_clock.rb
+web: ruby archive_clock.rb
