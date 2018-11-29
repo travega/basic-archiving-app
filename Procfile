@@ -1,2 +1,2 @@
-web: ruby archive_clock.rb
-release: ruby setup.rb
+web: ruby archiver.rb
+release: ruby ./setup/setup.rb

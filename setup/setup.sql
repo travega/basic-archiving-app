@@ -15,10 +15,10 @@ CREATE TABLE IF NOT EXISTS archive.property__c (LIKE salesforce.property__c INCL
 INSERT INTO archive.property__c
 SELECT *, now() AS archival_date
 FROM salesforce.property__c;
--- WHERE createddate::date >= current_date - interval '1 years' AND createddate::date < current_date - interval '8 years';
+-- WHERE createddate::date >= current_date - interval '2 years' AND createddate::date < current_date - interval '8 years';
 
 -- DELETE FROM salesforce.property__c
--- WHERE createddate::date >= current_date - interval '1 years' AND createddate::date < current_date - interval '8 years';
+-- WHERE createddate::date >= current_date - interval '2 years' AND createddate::date < current_date - interval '8 years';
 
 END;
 $BODY$
