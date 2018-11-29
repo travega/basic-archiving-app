@@ -1,6 +1,6 @@
 echo '---- STARTING INSTALL ----'
 echo ''
-echo 'RUNNING COMMAND: heroku create $1 --region=eu'
+echo "RUNNING COMMAND: heroku create $1 --region=eu"
 heroku create $1 --region=eu
 heroku pg:wait
 echo ''
