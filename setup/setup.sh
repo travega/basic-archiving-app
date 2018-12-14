@@ -6,19 +6,18 @@ heroku pg:wait
 echo ''
 echo 'RUNNING COMMAND: heroku addons:create heroku-postgresql'
 heroku addons:create heroku-postgresql
-heroku pg:wait
+heroku addons:wait
 echo ''
 echo 'RUNNING COMMAND: heroku addons:create herokuconnect'
 heroku addons:create herokuconnect
-heroku pg:wait
+heroku addons:wait
 echo ''
 echo 'RUNNING COMMAND: heroku addons:create scheduler'
-heroku addons:create scheduler:standard
-heroku pg:wait
+heroku addons:create temporize:developer
+heroku addons:wait
 echo ''
 echo 'Exporting Config Vars to local .env file.'
 heroku config -s > .env
-heroku pg:wait
 echo ''
 echo '---- STARTING APP RELEASE ----'
 
