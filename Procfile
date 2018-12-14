@@ -1,2 +1,2 @@
-web: ruby archive_clock.rb
-release: ruby setup.rb
+web: rackup -p $PORT
+worker: ruby archiver.rb
