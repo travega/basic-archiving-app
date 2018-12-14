@@ -4,7 +4,7 @@
   "image": "heroku/ruby",
   "repository": "https://github.com/travega/basic-archiving-app",
   "keywords": ["ruby" ],
-  "addons": [ "heroku-postgresql", "herokuconnect" ],
+  "addons": [ "heroku-postgresql", "herokuconnect", "" ],
   "environments": {
     "test": {
       "scripts": {
