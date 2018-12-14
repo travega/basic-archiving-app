@@ -1,0 +1,109 @@
+{
+  "mappings": [
+    {
+      "object_name": "Lead",
+      "config": {
+        "access": "read_write",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 600,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "ConvertedDate": {},
+          "Term_Years__c": {},
+          "Jigsaw": {},
+          "LastName": {},
+          "Primary__c": {},
+          "Street": {},
+          "IsUnreadByOwner": {},
+          "EmailBouncedReason": {},
+          "NumberOfEmployees": {},
+          "NumberofLocations__c": {},
+          "MasterRecord__External_ID__c": {},
+          "LastViewedDate": {},
+          "IsConverted": {},
+          "ConvertedContactId": {},
+          "SICCode__c": {},
+          "DandbCompanyId": {},
+          "ProductInterest__c": {},
+          "CurrentGenerators__c": {},
+          "City": {},
+          "Name": {},
+          "Latitude": {},
+          "MobilePhone": {},
+          "LastModifiedDate": {},
+          "Phone": {},
+          "MasterRecordId": {},
+          "OwnerId": {},
+          "Interest_Rate__c": {},
+          "EmailBouncedDate": {},
+          "Longitude": {},
+          "IsDeleted": {},
+          "SystemModstamp": {},
+          "LastModifiedById": {},
+          "State": {},
+          "Status": {},
+          "LastActivityDate": {},
+          "External_ID__c": {},
+          "Principal__c": {},
+          "CreatedDate": {},
+          "ConvertedAccountId": {},
+          "Country": {},
+          "LeadSource": {},
+          "GeocodeAccuracy": {},
+          "PostalCode": {},
+          "Salutation": {},
+          "Title": {},
+          "JigsawContactId": {},
+          "CreatedById": {},
+          "Website": {},
+          "Id": {},
+          "FirstName": {},
+          "CleanStatus": {},
+          "CompanyDunsNumber": {},
+          "ConvertedOpportunityId": {},
+          "Email": {},
+          "Description": {},
+          "Company": {},
+          "AnnualRevenue": {},
+          "Rating": {},
+          "PhotoUrl": {},
+          "LastReferencedDate": {},
+          "Fax": {},
+          "Industry": {}
+        },
+        "indexes": {
+          "MasterRecordId": {
+            "unique": false
+          },
+          "LastModifiedDate": {
+            "unique": false
+          },
+          "SystemModstamp": {
+            "unique": false
+          },
+          "External_ID__c": {
+            "unique": true
+          },
+          "Id": {
+            "unique": true
+          }
+        },
+        "upsert_field": "External_ID__c"
+      }
+    }
+  ],
+  "connection": {
+    "app_name": "simple-arhiver-app",
+    "organization_id": "00D1i000000D4b8EAC",
+    "exported_at": "2018-12-14T10:01:26.302229+00:00",
+    "features": {
+      "poll_db_no_merge": true,
+      "poll_external_ids": false,
+      "rest_count_only": false
+    },
+    "api_version": "44.0",
+    "name": "",
+    "logplex_log_enabled": false
+  },
+  "version": 1
+}
