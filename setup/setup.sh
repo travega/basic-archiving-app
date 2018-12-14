@@ -12,8 +12,8 @@ echo 'RUNNING COMMAND: heroku addons:create herokuconnect'
 heroku addons:create herokuconnect
 heroku pg:wait
 echo ''
-echo 'RUNNING COMMAND: heroku addons:create herokuconnect'
-heroku addons:create herokuconnect
+echo 'RUNNING COMMAND: heroku addons:create scheduler'
+heroku addons:create scheduler:standard
 heroku pg:wait
 echo ''
 echo 'Exporting Config Vars to local .env file.'
