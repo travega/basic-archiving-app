@@ -4,5 +4,5 @@
   "image": "heroku/ruby",
   "repository": "https://github.com/travega/basic-archiving-app",
   "keywords": ["ruby" ],
-  "addons": ["heroku-postgresql", "herokuconnect", "temporize:developer"]
+  "addons": ["heroku-postgresql", "herokuconnect", "scheduler:standard"]
 }

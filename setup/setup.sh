@@ -13,7 +13,7 @@ heroku addons:create herokuconnect
 heroku addons:wait
 echo ''
 echo 'RUNNING COMMAND: heroku addons:create scheduler'
-heroku addons:create temporize:developer
+heroku addons:create scheduler:standard
 heroku addons:wait
 echo ''
 echo 'Exporting Config Vars to local .env file.'
