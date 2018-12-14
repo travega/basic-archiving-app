@@ -5,16 +5,16 @@ CREATE OR REPLACE FUNCTION archive.run_archival()
 $BODY$
 BEGIN
 
-CREATE TABLE IF NOT EXISTS archive.property__c (LIKE salesforce.property__c INCLUDING ALL);
+CREATE TABLE IF NOT EXISTS archive.lead (LIKE salesforce.lead INCLUDING ALL);
     BEGIN
-        ALTER TABLE archive.property__c ADD COLUMN archival_date timestamp;
+        ALTER TABLE archive.lead ADD COLUMN archival_date timestamp;
     EXCEPTION
-        WHEN duplicate_column THEN RAISE NOTICE 'column archival_date already exists in archiving.property__c.';
+        WHEN duplicate_column THEN RAISE NOTICE 'column archival_date already exists in archiving.lead.';
     END;
 
-INSERT INTO archive.property__c
+INSERT INTO archive.lead
 SELECT *, now() AS archival_date
-FROM salesforce.property__c;
+FROM salesforce.lead;
 -- WHERE createddate::date >= current_date - interval '2 years' AND createddate::date < current_date - interval '8 years';
 
 -- DELETE FROM salesforce.property__c
