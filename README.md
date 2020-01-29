@@ -21,3 +21,5 @@
     heroku config > .env
     ```
  4. Then deploy the code to your app by running: `git push heroku master`
+
+WooHoo!!
